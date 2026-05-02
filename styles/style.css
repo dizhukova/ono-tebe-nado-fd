@@ -1,1 +1,324 @@
-/* место для вашего кода */
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  gap: 115px;
+  padding: 92px 50px;
+}
+
+.header__links-list {
+  display: flex;
+  column-gap: 13px;
+}
+
+.header__links-list-item {
+  list-style-position: inside;
+  list-style-type: circle;
+  white-space: nowrap;
+  /* чтобы текст элементов меню не сворачивался */
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.header__link {
+  font-size: 18px;
+  text-underline-offset: 4px;
+  text-transform: lowercase;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block;
+  width: 130px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+  text-underline-offset: 4px;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 239.48px;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 106px;
+  min-height: 757px;
+  padding: 165px 50px 50px;
+  background: url(../images/cover.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 60%;
+  background-color: #000000;
+}
+
+.cover__title {
+  z-index: 1;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 30px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.aligned-text {
+  display: block;
+  padding-top: 20px;
+}
+
+.aligned-text_left {
+  padding-top: 0;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.cover__description {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 107px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.cover__description-text {
+  line-height: 28px;
+  word-spacing: 19px;
+}
+
+.bet-button {
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  color: #fff;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.lots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 180px 24px 0;
+}
+
+.lots__heading {
+  padding-bottom: 27px;
+  padding-left: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 25px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 48px 40px;
+  color: #fff;
+}
+
+/* поменяла файлы картинок, на картинки из фигмы,
+ потому что отличались от макета, были более растянутыми */
+
+.card_type_film {
+  background: url(../images/card-lot-01.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_book {
+  background: url(../images/card-lot-02.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_picture {
+  background: url(../images/card-lot-03.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* почему-то мне кажется, что шрифт заголовка и основного текста 
+  жирнее и насыщеннее, чем в макете.. не могу победить */
+
+.card__title {
+  z-index: 1;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  z-index: 2;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.lots__look-more-link {
+  padding-top: 30px;
+  padding-left: 40px;
+  font-weight: normal;
+  font-size: 20px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: lowercase;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 334px auto;
+  column-gap: 25px;
+  margin: 120px 24px 0;
+}
+
+.about__column {
+  justify-self: center;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin-top: 35px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.about__title {
+  margin-top: 136px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.description-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.about__text {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 180px;
+  padding: 0 50px;
+}
+
+.footer__address {
+  justify-self: start;
+  max-width: 264.57px;
+  padding-bottom: 82px;
+}
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  text-align: center;
+  list-style: none;
+}
+
+.footer__menu-link {
+  font-size: 18px;
+  text-underline-offset: 4px;
+  text-transform: lowercase;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  column-gap: 48px;
+  list-style: none;
+}
+
+.footer__social-link {
+  text-decoration: none;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
+}
