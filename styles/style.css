@@ -2,20 +2,17 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  gap: 115px;
   padding: 92px 50px;
 }
 
 .header__links-list {
   display: flex;
-  column-gap: 13px;
+  column-gap: 12px;
 }
 
 .header__links-list-item {
   list-style-position: inside;
   list-style-type: circle;
-  white-space: nowrap;
-  /* чтобы текст элементов меню не сворачивался */
 }
 
 .header__links-list-item_no-bullit {
@@ -34,7 +31,12 @@
 
 .header__logo {
   display: block;
-  width: 130px;
+  text-decoration: none;
+}
+
+.header__logo-image {
+  width: 129.11px;
+  height: 104.65px;
 }
 
 .address {
@@ -86,10 +88,6 @@
   letter-spacing: 30px;
 }
 
-.no-letter-spacing {
-  letter-spacing: 0;
-}
-
 .aligned-text {
   display: block;
   padding-top: 20px;
@@ -105,6 +103,10 @@
 
 .aligned-text_right {
   text-align: right;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__description {
@@ -173,31 +175,21 @@
   height: 100%;
   padding: 48px 40px;
   color: #fff;
+  background-position: center;
+  background-size: cover;
 }
-
-/* поменяла файлы картинок, на картинки из фигмы,
- потому что отличались от макета, были более растянутыми */
 
 .card_type_film {
   background: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
-
-/* почему-то мне кажется, что шрифт заголовка и основного текста 
-  жирнее и насыщеннее, чем в макете.. не могу победить */
 
 .card__title {
   z-index: 1;
@@ -219,13 +211,14 @@
 }
 
 .lots__look-more-link {
-  padding-top: 30px;
-  padding-left: 40px;
+  margin-top: 30px;
+  margin-left: 40px;
   font-weight: normal;
   font-size: 20px;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 5px;
   text-transform: lowercase;
+  max-width: fit-content;
 }
 
 .about {
